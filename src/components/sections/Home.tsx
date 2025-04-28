@@ -18,7 +18,7 @@ const Home: React.FC = () => {
           >
             <h2 className="text-xl md:text-2xl font-medium text-blue-600 dark:text-blue-400">Hello, I'm</h2>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
-              John Doe
+              Ayesh Chamikara
             </h1>
             <h3 className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300">
               <span className="animate-typing">Web Developer & Designer</span>

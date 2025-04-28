@@ -44,7 +44,7 @@ const projects: Project[] = [
     description: "A comprehensive canteen management solution built with pure PHP. Features include menu management, order processing, inventory tracking, and sales reporting. Implemented payment integration and real-time order notifications.",
     image: "https://images.pexels.com/photos/6941039/pexels-photo-6941039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/malakashashiranga/FoodFrenzy-Canteen-Food-Ordering-System.git",
     liveUrl: "https://example.com"
   }
 ];

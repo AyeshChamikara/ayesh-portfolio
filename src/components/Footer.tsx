@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
           
           <div className="text-gray-400 text-sm text-center">
             <p>&copy; {currentYear} Ayesh's Portfolio. All rights reserved.</p>
-            <p className="mt-2">Designed and built with ❤️</p>
+            <p className="mt-2">Designed and built by Ayesh ❤️</p>
           </div>
         </div>
       </div>

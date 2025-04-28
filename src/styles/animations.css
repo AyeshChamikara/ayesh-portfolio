@@ -161,7 +161,7 @@
     width: 0;
   }
   to {
-    width: 52%;
+    width: 100%;
   }
 }
 
@@ -177,7 +177,7 @@
   white-space: nowrap;
   border-right: 2px solid;
   width: 0;
-  animation: typing 3s steps(32) infinite alternate,
+  animation: typing 3s steps(30) infinite alternate,
              blink 0.7s step-end infinite;
 }
 
@@ -222,4 +222,21 @@
 
 .animate-fillBar {
   animation: fillBar 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Service Card Animations */
+.service-card {
+  opacity: 0;
+}
+
+.service-card.visible {
+  opacity: 1;
+}
+
+.service-card.visible:nth-child(odd) {
+  animation: fadeInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.service-card.visible:nth-child(even) {
+  animation: fadeInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }

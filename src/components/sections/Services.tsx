@@ -1,5 +1,5 @@
-import React from 'react';
-import { Code, Layout, Database, Laptop, Pen, Search } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import { Code, Layout, Database, Smartphone, Pen, Search } from 'lucide-react';
 
 interface Service {
   id: number;
@@ -29,9 +29,9 @@ const services: Service[] = [
   },
   {
     id: 4,
-    title: 'Web App Development',
-    description: 'Developing web applications for any type of ideas.',
-    icon: <Laptop className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
+    title: 'Mobile Development',
+    description: 'Developing mobile applications for iOS and Android platforms.',
+    icon: <Smartphone className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
   },
   {
     id: 5,
@@ -48,6 +48,27 @@ const services: Service[] = [
 ];
 
 const Services: React.FC = () => {
+  const serviceRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    serviceRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="services" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
@@ -61,14 +82,15 @@ const Services: React.FC = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={service.id}
-              className="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 transition-all duration-300 hover-lift animate-scaleIn"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              ref={el => serviceRefs.current[index] = el}
+              className="service-card bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 transition-all duration-300 hover-lift"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="mb-4 animate-rotateIn" style={{ animationDelay: `${index * 0.1 + 0.3}s` }}>
+              <div className="mb-4 animate-rotateIn" style={{ animationDelay: `${index * 0.2 + 0.3}s` }}>
                 {service.icon}
               </div>
               <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{service.title}</h4>

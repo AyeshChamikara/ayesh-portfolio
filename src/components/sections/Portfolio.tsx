@@ -25,7 +25,7 @@ const projects: Project[] = [
     id: 2,
     title: "Acme Company Website",
     description: "A modern, responsive corporate website built with WordPress. Custom theme development with advanced features including team management, project portfolio, blog integration, and contact form with email notifications. Optimized for speed and SEO.",
-    image: "https://photos.google.com/photo/AF1QipP5-vxsAeZtHpG-HUmKnhiFoKpgr_ISKohhR_J_",
+    image: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     technologies: ["WordPress", "PHP", "MySQL", "JavaScript"],
     liveUrl: "https://acme.lk/demo/"
   },

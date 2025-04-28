@@ -59,7 +59,7 @@ const Home: React.FC = () => {
             <div className="relative">
               <div className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full absolute blur-3xl opacity-20" />
               <img 
-                src="src/components/images/profile.jpg" 
+                src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/bd9b452ea50ef5a7171a6fec386dd480-1745467642899/59bde638-73c5-434d-8a83-14232fa62eab.png" 
                 alt="Profile" 
                 className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover rounded-full shadow-2xl border-8 border-white dark:border-gray-800 relative z-10"
               />
